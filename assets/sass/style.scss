@@ -1,0 +1,61 @@
+body {
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    transition: ease-in-out all 0.8s;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .foto, .config {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #ccc;
+    }
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .titulo {
+        font-size: 2rem;
+        font-weight: bold;
+        background-image: linear-gradient(to bottom, #fffbc7, #c0af16, #445214);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+    }
+    .pesquisar {
+        width: 30%;
+        padding: 0.7rem 2rem;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(128, 128, 128);
+        align-self: center;
+    }
+    .all-icons {
+        width: 70vw;
+        height: 300px;
+        margin: auto;
+        margin-top: 2rem;
+        overflow: hidden;
+
+        .icons {
+            height: 100%;
+            width: 1000vw;
+            display: flex;
+            transition: all ease 0.5s;
+
+            .icon {
+                width: 250px;
+                height: auto;
+                background-color: rgba(216, 216, 216, 0.664);
+                border-radius: 10px;
+                margin: 0.5rem 0.5rem;
+            }
+        }
+    }
+}
