@@ -36,6 +36,9 @@ main {
         background-color: rgb(128, 128, 128);
         align-self: center;
     }
+    .pesquisar::placeholder {
+        color: #fff;
+    }
     .all-icons {
         width: 70vw;
         height: 300px;
