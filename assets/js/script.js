@@ -3,6 +3,7 @@ let body = document.querySelector("body")
 
 config.addEventListener('click', ()=>{
     body.style.backgroundColor = "#fff"
+    body.style.backgroundImage = "none"
     body.style.color = "#000"
 
 })
@@ -39,3 +40,24 @@ function updateMargin()
 }
 
 //let timer = setInterval(goNext, 5000);
+
+/*
+%fundamento-item {
+    width:30vw;
+    margin: 0.3rem auto;
+    padding: 10px;
+    border: 2px solid #000;
+}
+
+@for $i from 1 through 6 {
+    .item-#{$i} {
+        @extend %fundamento-item;
+        @if $i < 4 {
+            color: blue;
+        }
+        &:hover {
+            background-color: burlywood;
+        }
+    }
+}
+*/

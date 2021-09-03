@@ -1,11 +1,13 @@
 @import 'reset';
 body {
-    background-color: #000000;
+    background-image: linear-gradient(to bottom, #000000, #222116, #000000);
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     transition: ease-in-out all 0.8s;
 }
 header {
+    width: 90%;
+    margin: 1rem auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,6 +34,7 @@ main {
     }
     .pesquisar {
         width: 30%;
+        margin:1rem;
         padding: 0.7rem 2rem;
         border-radius: 10px;
         border: none;
@@ -57,10 +60,22 @@ main {
             .icon {
                 width: 250px;
                 height: auto;
+                text-align: center;
                 background-color: rgba(216, 216, 216, 0.664);
                 border-radius: 10px;
                 margin: 0.5rem 0.5rem;
+
+                .img {
+                    width: 80%;
+                    height: 40%;
+                    background-image: url(../img/poke1.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    margin: 1rem auto;
+                }
             }
         }
     }
 }
+
+
