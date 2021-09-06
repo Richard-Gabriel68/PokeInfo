@@ -1,6 +1,10 @@
 let config = document.querySelector(".config")
 let body = document.querySelector("body")
 
+let numberOfIcons = document.querySelectorAll('.icon').length
+let currentSlide = 0
+
+
 config.addEventListener('click', ()=>{
     body.style.backgroundColor = "#fff"
     body.style.backgroundImage = "none"
@@ -8,38 +12,49 @@ config.addEventListener('click', ()=>{
 
 })
 
-let numberOfIcons = document.querySelectorAll('.icon').length;
+pizzaJson.map((item) =>
+{
+    let icon = document.querySelector('.models .icon').cloneNode(true)
+    
+    icon.querySelector('.desc').innerHTML = item.description
+    icon.querySelector('.img').backgroundImage = item.img
 
-let currentSlide = 0;
+    document.querySelector('main .all-icons .icons').append(icon)
+
+})
 
 function goPrev()
 {
-    currentSlide--;
+    currentSlide--
     if(currentSlide < 0)
     {
         currentSlide = numberOfIcons - 1;
     }
-    updateMargin();
+    updateMargin()
 }
 
 function goNext()
 {
-    currentSlide++;
+    currentSlide++
     if(currentSlide > (numberOfIcons - 1))
     {
         currentSlide = 0;
     }
-    updateMargin();
+    updateMargin()
 }
 
 function updateMargin()
 {
-    let newMargin = currentSlide * 260;
+    let newMargin = currentSlide * 260
 
-    document.querySelector('.icons').style.marginLeft = `-${newMargin}px`;
+    document.querySelector('.icons').style.marginLeft = `-${newMargin}px`
 }
 
 //let timer = setInterval(goNext, 5000);
+
+
+
+
 
 /*
 %fundamento-item {
